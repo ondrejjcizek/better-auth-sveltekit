@@ -5,10 +5,10 @@ import { GITHUB_CLIENT_SECRET, GITHUB_CLIENT_ID } from '$env/static/private';
 
 export const auth = betterAuth({
 	database: drizzleAdapter(db, {
-		provider: 'mysql'
+		provider: 'sqlite'
 	}),
 	emailAndPassword: {
-		enabled: false
+		enabled: true
 	},
 	socialProviders: {
 		github: {
